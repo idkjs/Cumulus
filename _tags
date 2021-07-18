@@ -72,7 +72,7 @@
 
 true: bin_annot, safe_string
 
-<src/base/db/db_*.ml>: package(macaque.syntax), syntax(camlp4o)
+<src/base/db/db_*.ml>: package(macaque.syntax), package(tyxml), syntax(camlp4o)
 <src/**/*.ml{,i}>: thread
 <src/*.ml{,i}>: -use_db
 <src/{server,client,type}/*.ml{,i}>: -use_db

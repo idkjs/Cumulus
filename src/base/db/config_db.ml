@@ -22,6 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 open Batteries
 open Eliom_lib.Lwt_ops
 open Ocsigen_extensions
+open Tyxml.Html
 type t =
   { database : string option
   ; host : string option
@@ -32,7 +33,7 @@ type t =
   }
 
 let rec init_fun data = function
-  | Simplexmlparser.Element ("database" as tag, attribs, content)::l ->
+  | Xml.Element ("database" as tag, attribs, content)::l ->
       if content <> [] then
         Configfile.fail_content ~tag;
       let data =
