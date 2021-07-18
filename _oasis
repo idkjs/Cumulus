@@ -54,7 +54,12 @@ Library base
     camomile,
     markdown.html (>= 0.1.1)
   ByteOpt: -w A-44-33-41
-
+Library tyxml
+  FindlibParent: cumulus
+  Build$: flag(tyxml)
+  Path: cumulus/tyxml
+  Modules: LisTyxml,Simplexmlparser
+  BuildDepends: cumulus, tyxml
 Library db
   Path: src/base/db
   FindlibParent: cumulus

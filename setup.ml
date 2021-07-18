@@ -6837,7 +6837,7 @@ let setup_t =
                       bs_compiled_object = Best;
                       bs_build_depends =
                         [
-                           FindlibPackage ("eliom.server.ext", None);
+                           FindlibPackage ("eliom", None);
                            InternalLibrary "base"
                         ];
                       bs_build_tools = [ExternalTool "ocamlbuild"];

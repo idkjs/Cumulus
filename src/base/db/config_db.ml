@@ -21,7 +21,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 open Batteries
 open Eliom_lib.Lwt_ops
-
+open Ocsigen_extensions
 type t =
   { database : string option
   ; host : string option
